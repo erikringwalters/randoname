@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NameService } from '../name.service';
 
 @Component({
   selector: 'app-home',
@@ -6,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  nameService: NameService = new NameService();
 
-  constructor() { }
+  public name: any;
+  constructor() {
+    this.name = this.nameService.getRandomName();
+  }
 
   ngOnInit(): void {
   }
