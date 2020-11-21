@@ -6,6 +6,11 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class NameService {
+  name: string
+  nameIndex = 0;
+  generatedNames: String[] = [];
+
+
   constructor() {
   }
 
@@ -14,10 +19,40 @@ export class NameService {
     return random;
   }
 
+  generateRandomName() {
+    this.name = this.getRandomName()
+    this.addToNameList(this.name);
+    return this.name;
+  }
+
+  addToNameList(name: string) {
+    if (this.generatedNames.length >= 100) {
+      this.generatedNames.shift();
+    }
+    this.generatedNames.push(name);
+    this.nameIndex = this.generatedNames.length - 1;
+  }
 
   getRandomName() {
     return this.names[this.getRandomNumber(0, this.names.length)]
   }
+
+  setName(name: string) {
+    this.name = name;
+  }
+
+  goToPreviousName() {
+    if (this.nameIndex > 0) {
+      this.nameIndex--;
+    }
+  }
+
+  goToNextName() {
+    if(this.nameIndex < this.generatedNames.length) {
+      this.nameIndex++;
+    }
+  }
+
 
   names = [
     "Lzagril",

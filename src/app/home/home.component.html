@@ -1,10 +1,17 @@
 <div id="home-container">
-  <h2>{{ name | titlecase}}</h2>
+
+
+    <h2 class="name">{{ nameService.generatedNames[nameService.nameIndex] | titlecase }}</h2>
+    <hr class="underline"/>
+
 
   <div id="gen-button-div">
-    <button mat-fab id="gen-button" color="black" title="Generate Name" (click)="this.name = this.nameService.getRandomName()">
+    <button mat-button  class="prevButton" (click)="this.nameService.goToPreviousName()"><</button>
+    <button mat-fab id="gen-button" color="black" title="Generate Name" (click)="this.name = nameService.generateRandomName()">
       <img src="assets/images/dice.svg" width="24px">
     </button>
+    <button mat-button class="nextButton" (click)="this.nameService.goToNextName()">></button>
+
   </div>
 
 </div>

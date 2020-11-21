@@ -9,5 +9,22 @@ span {
 }
 #gen-button-div {
   text-align: center;
+  vertical-align: middle;
+
+  height: 80%;
 }
+.name {
+  padding: 20px 0px 0px 0px;
+}
+.underline {
+  width: 100px;
+  padding-top: -10px;
+}
+.prevButton {
+  margin: 10px;
+}
+.nextButton {
+  margin: 10px;
+}
+
 

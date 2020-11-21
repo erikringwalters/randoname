@@ -8,10 +8,10 @@ import { NameService } from '../name.service';
 })
 export class HomeComponent implements OnInit {
   nameService: NameService = new NameService();
-
   public name: any;
+
   constructor() {
-    this.name = this.nameService.getRandomName();
+    this.name = "";
   }
 
   ngOnInit(): void {
