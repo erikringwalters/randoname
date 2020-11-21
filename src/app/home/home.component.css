@@ -7,18 +7,27 @@ span {
 #home-container {
   text-align: center;
 }
-#gen-button-div {
-  text-align: center;
-  vertical-align: middle;
+#nameDiv {
+  display:block;
+  width:100%;
+  height:70px;
+  padding-bottom: 5px;
 
-  height: 80%;
 }
+
 .name {
-  padding: 20px 0px 0px 0px;
+  padding-top: 50px;
 }
 .underline {
-  width: 100px;
-  padding-top: -10px;
+  width: 150px;
+  border: none;
+  height: 2px;
+  border-radius: 5%;
+  background: black;
+}
+#gen-button-div {
+  vertical-align: middle;
+  margin-top: 300px;
 }
 .prevButton {
   margin: 20px;
