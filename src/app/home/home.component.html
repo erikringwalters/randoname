@@ -1,5 +1,5 @@
 <div id="home-container">
-  <h2>{{ name }}</h2>
+  <h2>{{ name | titlecase}}</h2>
 
   <div id="gen-button-div">
     <button mat-fab id="gen-button" color="black" title="Generate Name" (click)="this.name = this.nameService.getRandomName()">
