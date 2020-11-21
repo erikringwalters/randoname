@@ -26,14 +26,16 @@ span {
   background: black;
 }
 #gen-button-div {
-  vertical-align: middle;
   margin-top: 300px;
 }
-.prevButton {
-  margin: 20px;
+.prevButton, .nextButton {
+  margin-left: 50px;
+  margin-right: 50px;
+  padding:5px;
 }
-.nextButton {
-  margin: 20px;
+.nextImg, .prevImg {
+  height: 30px;
 }
+
 
 
