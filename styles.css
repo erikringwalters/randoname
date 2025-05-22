@@ -1,0 +1,132 @@
+body {
+    background-color: #181A1B;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    touch-action: manipulation;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    color: white;
+    user-select: none;
+    font-size: 32pt;
+    font-weight: normal;
+}
+
+#titleDice {
+    width: 24pt;
+    vertical-align: -1px;
+}
+
+.title-span {
+    margin-right: -5px;
+    margin-left: -5px;
+}
+
+.inputDiv {
+    margin-top: 100pt;
+    margin-bottom: 50pt;
+}
+
+#nameInput {
+    text-align: center;
+    font-size: 22pt;
+    height: 30pt;
+    width: 150pt;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+#nameInput::placeholder {
+    color: #CCCCCC;
+}
+
+@property --myColor1 {
+    syntax: '<color>';
+    initial-value: #ddaa00;
+    inherits: false;
+}
+
+@property --myColor2 {
+    syntax: '<color>';
+    initial-value: #ff6600;
+    inherits: false;
+}
+
+.container {
+    display: flex;
+}
+
+.buttonContainer {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    margin: 0px;
+    width: 100%
+}
+
+#generateButton {
+    width: 64pt;
+    height: 64pt;
+    border-radius: 50%;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.6);
+}
+
+.gradientButton {
+    background: linear-gradient(135deg, var(--myColor1), var(--myColor2));
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: --myColor1 1.0s, --myColor2 1.0s;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.arrow {
+    color: white;
+    font-size: 32pt;
+    margin-top: -20pt;
+    cursor: pointer;
+    width: 40pt;
+}
+
+#prev {
+    margin-right: 70pt;
+}
+
+#next {
+    margin-left: 70pt;
+}
+
+.noselect {
+    user-select: none;
+    touch-action: manipulation;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+    supported by Chrome, Edge, Opera and Firefox */
+}
+
+.noselect::selection {
+    background-color: transparent;
+    color: #000;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<div class="container">
+
+    <head>
+        <title>RANDONAME</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/svg">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="scripts/scripts.js"></script>
+        <script src="scripts/begs.js"></script>
+        <script src="scripts/ends.js"></script>
+    </head>
+</div>
+
+<body>
+    <h1>
+        <span class="title-span noselect">RAND</span>
+        <span class="title-span noselect"><img id="titleDice" class="noselect" src="vectors/dice.svg"></span>
+        <span class="title-span noselect">NAME</span>
+    </h1>
+
+    <div class="container inputDiv noselect">
+        <input id="nameInput" class="center noselect" placeholder="Click the D20!" autocomplete="off" autocorrect="off"
+            autocapitalize="off" spellcheck="false">
+    </div>
+    <div class="buttonContainer noselect center">
+        <div class="arrowDiv inline noselect">
+            <img id="prev" class="arrow noselect" src="vectors/arrowLeft.svg">
+
+        </div>
+        <div class="center inline noselect">
+            <button id="generateButton" class="gradientButton noselect">
+                <div class="arrowDiv noselect">
+                    <img id="diceButtonImg" class="center noselect" src="vectors/dice.svg" width="64pt">
+                </div>
+            </button>
+        </div>
+        <div class="arrowDiv inline noselect">
+            <img id="next" class="arrow noselect" src="vectors/arrowRight.svg">
+        </div>
+    </div>
+</body>
